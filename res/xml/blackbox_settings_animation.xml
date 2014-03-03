@@ -7,5 +7,12 @@
     <PreferenceScreen
         android:key="system_animation"
         android:title="@string/system_animation_title"
-        android:fragment="com.crdroid.settings.fragments.AnimationControls" />
+        android:fragment="com.blackbox.settings.fragments.AnimationControls" />
+
+    <ListPreference
+        android:key="toast_animation"
+        android:title="@string/toast_animation_title"
+        android:entries="@array/toast_animation_entries"
+        android:entryValues="@array/toast_animation_values"
+        android:persistent="false" />
 </PreferenceScreen>
