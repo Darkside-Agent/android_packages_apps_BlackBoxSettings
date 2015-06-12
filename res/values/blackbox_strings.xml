@@ -999,4 +999,13 @@
     <string name="recents_dismiss_icon_title">Dismiss Task</string>
     <string name="recents_dismiss_icon_summary">Show dismiss lock icon in recents view</string>
 
+    <!-- Breathing Notifications -->
+    <string name="breathing_notifications_category">Breathing notifications</string>
+    <string name="missed_call_breath_title">Missed Call</string>
+    <string name="missed_call_breath_summary">Give breathing effect to missed call notifications in the statusbar</string>
+    <string name="voicemail_breath_title">Voicemail</string>
+    <string name="voicemail_breath_summary">Give breathing effect to voicemail notifications in the statusbar</string>
+    <string name="sms_breath_title">SMS</string>
+    <string name="sms_breath_summary">Give breathing effect to SMS notifications in the statusbar</string>
+
 </resources>

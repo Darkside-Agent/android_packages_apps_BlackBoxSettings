@@ -23,9 +23,17 @@ public class NotificationsSettings extends SettingsPreferenceFragment
 
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
     private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
+    private static final String MISSED_CALL_BREATH = "missed_call_breath";
+    private static final String VOICEMAIL_BREATH = "voicemail_breath";
+    private static final String SMS_BREATH = "sms_breath";
+    private static final String BREATHING_NOTIFICATIONS = "breathing_notifications";
 
     private ListPreference mHeadsUpTimeOut;
     private ListPreference mHeadsUpSnoozeTime;
+    private SwitchPreference mMissedCallBreath;
+    private SwitchPreference mVoicemailBreath;
+    private SwitchPreference mSmsBreath;
+    private PreferenceGroup mBreathingNotifications;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,6 +41,37 @@ public class NotificationsSettings extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.blackbox_settings_notifications);
 
+        PreferenceScreen prefSet = getPreferenceScreen();
+
+        mMissedCallBreath = (SwitchPreference) findPreference(MISSED_CALL_BREATH);
+        mVoicemailBreath = (SwitchPreference) findPreference(VOICEMAIL_BREATH);
+        mSmsBreath = (SwitchPreference) findPreference(SMS_BREATH);
+
+        mBreathingNotifications = (PreferenceGroup) findPreference(BREATHING_NOTIFICATIONS);
+
+        Context context = getActivity();
+        ConnectivityManager cm = (ConnectivityManager)
+                context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        if(cm.isNetworkSupported(ConnectivityManager.TYPE_MOBILE)) {
+
+            mMissedCallBreath.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.KEY_MISSED_CALL_BREATH, 0) == 1);
+            mMissedCallBreath.setOnPreferenceChangeListener(this);
+
+            mVoicemailBreath.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1);
+            mVoicemailBreath.setOnPreferenceChangeListener(this);
+
+            mSmsBreath.setChecked(Settings.Global.getInt(getContentResolver(),
+                    Settings.Global.KEY_SMS_BREATH, 0) == 1);
+            mSmsBreath.setOnPreferenceChangeListener(this);
+        } else {
+            prefSet.removePreference(mMissedCallBreath);
+            prefSet.removePreference(mVoicemailBreath);
+            prefSet.removePreference(mSmsBreath);
+            prefSet.removePreference(mBreathingNotifications);
+        }
 
         Resources systemUiResources;
         try {
@@ -76,6 +115,21 @@ public class NotificationsSettings extends SettingsPreferenceFragment
                     Settings.System.HEADS_UP_NOTIFICATION_SNOOZE,
                     headsUpSnooze);
             updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
+            return true;
+        } else if (preference == mMissedCallBreath) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(), MISSED_CALL_BREATH,
+                    value ? 1 : 0);
+            return true;
+        } else if (preference == mVoicemailBreath) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(), VOICEMAIL_BREATH,
+                    value ? 1 : 0);
+            return true;
+        } else if (preference == mSmsBreath) {
+            boolean value = (Boolean) newValue;
+            Settings.Global.putInt(getContentResolver(), SMS_BREATH,
+                    value ? 1 : 0);
             return true;
         }
         return false;
