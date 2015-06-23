@@ -11,10 +11,10 @@
             android:fragment="com.blackbox.settings.fragments.ExpandedDesktopPreferenceFragment"
             android:persistent="false" />
 
-        <PreferenceScreen
+        <!--<PreferenceScreen
             android:key="interface_animation_scroll"
             android:fragment="com.blackbox.settings.fragments.ScrollAnimationInterfaceSettings"
             android:title="@string/scrolling_title"
             android:summary="@string/scrolling_summary"
-            android:persistent="false" />
+            android:persistent="false" />-->
 </PreferenceScreen>
