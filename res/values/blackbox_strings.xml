@@ -68,4 +68,8 @@
     <!-- Media art -->
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+
+    <!-- Screenshot Sound  -->
+    <string name="screenshot_sound_title">Enable screenshot sound</string>
+    <string name="screenshot_sound_summary">Option to enable or disable the screenshot sound</string>
 </resources>
