@@ -21,6 +21,9 @@ public class MiscSettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_LOCK_CLOCK = "lock_clock";
     private static final String KEY_LOCK_CLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
+    private static final String SCREENSHOT_TYPE = "screenshot_type";
+
+    private ListPreference mScreenshotType;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,12 +36,27 @@ public class MiscSettings extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(findPreference(KEY_LOCK_CLOCK));
         }
 
+        mScreenshotType = (ListPreference) findPreference(SCREENSHOT_TYPE);
+        int mScreenshotTypeValue = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.SCREENSHOT_TYPE, 0);
+        mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
+        mScreenshotType.setSummary(mScreenshotType.getEntry());
+        mScreenshotType.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-
-    return false;
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if  (preference == mScreenshotType) {
+            int mScreenshotTypeValue = Integer.parseInt(((String) newValue).toString());
+            mScreenshotType.setSummary(
+                    mScreenshotType.getEntries()[mScreenshotTypeValue]);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SCREENSHOT_TYPE, mScreenshotTypeValue);
+            mScreenshotType.setValue(String.valueOf(mScreenshotTypeValue));
+            return true;
+        }
+        return false;
     }
 
     @Override
