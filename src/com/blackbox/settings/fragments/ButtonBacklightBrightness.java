@@ -18,12 +18,13 @@ import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.blackbox.settings.preferences.CustomDialogPreference;
+import com.blackbox.settings.preferences.CustomDialogPref;
+
 import com.android.settings.R;
 
 import cyanogenmod.providers.CMSettings;
 
-public class ButtonBacklightBrightness extends CustomDialogPreference<AlertDialog> implements
+public class ButtonBacklightBrightness extends CustomDialogPref<AlertDialog> implements
         SeekBar.OnSeekBarChangeListener {
     private static final int DEFAULT_BUTTON_TIMEOUT = 5;
 
