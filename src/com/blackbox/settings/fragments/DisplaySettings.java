@@ -20,17 +20,35 @@ import com.android.settings.SettingsPreferenceFragment;
 public class DisplaySettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
+    private static final String KEY_DOZE_FRAGMENT = "doze_fragment";
+
+    private PreferenceScreen mDozeFragement;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.blackbox_settings_display);
 
+        mDozeFragement = (PreferenceScreen) findPreference(KEY_DOZE_FRAGMENT);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         return false;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        boolean dozeEnabled = Settings.Secure.getInt(
+                getContentResolver(), Settings.Secure.DOZE_ENABLED,
+                getActivity().getResources().getBoolean(
+                com.android.internal.R.bool.config_doze_enabled_by_default) ? 1 : 0) != 0;
+        if (mDozeFragement != null) {
+            mDozeFragement.setSummary(dozeEnabled
+                    ? R.string.summary_doze_enabled : R.string.summary_doze_disabled);
+        }
     }
 
     @Override
