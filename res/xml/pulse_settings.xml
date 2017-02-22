@@ -123,6 +123,13 @@
             settings:interval="200"
             settings:units="ms"
             android:dependency="pulse_2"/>
-	</PreferenceCategory>
 
+        <com.blackbox.settings.preferences.SeekBarPreference
+            android:key="pulse_solid_units_count"
+            android:title="@string/pulse_solid_units_count"
+            android:max="128"
+            settings:min="32"
+            settings:interval="16"
+            android:dependency="pulse_2"/>
+	</PreferenceCategory>
 </PreferenceScreen>
