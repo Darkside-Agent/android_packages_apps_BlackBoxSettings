@@ -959,4 +959,8 @@
     <string name="lockscreen_hide_status_bar_title">Status bar</string>
     <string name="lockscreen_hide_status_bar_summary">Display status bar</string>
 
+    <!-- Disable FC notifications -->
+    <string name="disable_fc_notifications_title">Disable force close</string>
+    <string name="disable_fc_notifications_summary">Hide all force close notification dialogs</string>
+
 </resources>
