@@ -83,4 +83,12 @@
     <!-- Lockscreen tap-to sleep -->
     <string name="double_tap_sleep_anywhere_title">Tap to sleep</string>
     <string name="double_tap_sleep_anywhere_summary">Double-tap anywhere on the lockscreen to put device asleep</string>
+
+    <!-- Hide Lockscreen clock, date & alarm -->
+    <string name="hide_lockscreen_clock_title">Clock</string>
+    <string name="hide_lockscreen_clock_summary">Display current time</string>
+    <string name="hide_lockscreen_date_title">Date</string>
+    <string name="hide_lockscreen_date_summary">Display today\'s date</string>
+    <string name="hide_lockscreen_alarm_title">Alarm</string>
+    <string name="hide_lockscreen_alarm_summary">Display alarm when set</string>
 </resources>
