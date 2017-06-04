@@ -40,7 +40,7 @@ public class OmniSwitch extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.APPLICATION;
+        return MetricsEvent.BLACKBOX_SETTINGS;
     }
 
     @Override

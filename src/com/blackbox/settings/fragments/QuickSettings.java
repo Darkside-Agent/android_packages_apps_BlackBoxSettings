@@ -45,7 +45,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
 
     @Override
     protected int getMetricsCategory() {
-        return MetricsEvent.APPLICATION;
+        return MetricsEvent.BLACKBOX_SETTINGS;
     }
 
 }
