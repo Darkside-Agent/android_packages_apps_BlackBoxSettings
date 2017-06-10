@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/misc_title"
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+        <PreferenceScreen
+             android:title="@string/power_notification_title"
+             android:summary="@string/power_notification_summary">
+        <intent android:action="com.android.settings.action.POWER_NOTIF_CONTROLS" />
+        </PreferenceScreen>
+
+     <PreferenceCategory
+        android:key="heads_up"
+        android:title="@string/heads_up_category">
+
+        <ListPreference
+            android:key="heads_up_time_out"
+            android:title="@string/heads_up_time_out_title"
+            android:entries="@array/heads_up_time_out_entries"
+            android:entryValues="@array/heads_up_time_out_values"
+            android:persistent="false" />
+
+     </PreferenceCategory>
+
+
+</PreferenceScreen>

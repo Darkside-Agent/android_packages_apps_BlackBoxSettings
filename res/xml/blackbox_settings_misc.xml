@@ -16,11 +16,4 @@
                 android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
         </PreferenceScreen>
 
-
-        <PreferenceScreen
-             android:title="@string/power_notification_title"
-             android:summary="@string/power_notification_summary">
-        <intent android:action="com.android.settings.action.POWER_NOTIF_CONTROLS" />
-        </PreferenceScreen>
-
 </PreferenceScreen>
