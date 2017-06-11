@@ -31,6 +31,13 @@
             android:fragment="com.blackbox.settings.fragments.NavigationBarSettings"
             android:icon="@drawable/ic_settings_navbar"/>
 
+        <!-- Display -->
+        <PreferenceScreen
+            android:key="display_category"
+            android:title="@string/display_title" 
+            android:fragment="com.blackbox.settings.fragments.DisplaySettings"
+            android:icon="@drawable/ic_settings_display" />
+
         <!-- Notifications -->
         <PreferenceScreen
             android:key="notifications_category"

@@ -16,13 +16,6 @@
                 android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
         </PreferenceScreen>
 
-        <PreferenceScreen
-            android:key="expanded_desktop"
-            android:title="@string/expanded_desktop_title"
-            android:summary="@string/expanded_desktop_summary"
-            android:fragment="com.blackbox.settings.fragments.ExpandedDesktopPreferenceFragment"
-            android:persistent="false" />
-
         <ListPreference
             android:key="pref_scrollingcache"
             android:dialogTitle="@string/pref_scrollingcache_title"
