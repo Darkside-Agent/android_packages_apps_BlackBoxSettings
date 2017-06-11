@@ -77,7 +77,7 @@
         android:entryValues="@array/clock_font_style_values"
         android:persistent="false" />
 
-   <com.crdroid.settings.preferences.SeekBarPreference
+   <com.blackbox.settings.preferences.SeekBarPreference
         android:key="statusbar_clock_font_size"
         android:title="@string/clock_font_size_title"
         android:max="23"
