@@ -22,7 +22,7 @@
         android:title="@string/toast_animation_title"
         android:entries="@array/toast_animation_entries"
         android:entryValues="@array/toast_animation_values"
-        android:persistent="false" />
+        android:defaultValue="1" />
 
     <ListPreference
         android:key="listview_animation"
@@ -47,6 +47,14 @@
         android:entries="@array/power_menu_animation_entries"
         android:entryValues="@array/power_menu_animation_values"
         android:defaultValue="0" />
+
+
+    <ListPreference
+        android:key="pref_scrollingcache"
+        android:dialogTitle="@string/pref_scrollingcache_title"
+        android:title="@string/pref_scrollingcache_title"
+        android:entries="@array/entries_scrollingcache"
+        android:entryValues="@array/values_scrollingcache" />
 
      <ListPreference
         android:key="qs_tile_animation_style"
