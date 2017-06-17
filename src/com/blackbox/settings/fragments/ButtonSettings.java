@@ -233,6 +233,7 @@ public class ButtonSettings extends SettingsPreferenceFragment
             } else {
                 powerCategory.removePreference(mCameraDoubleTapPowerGesture);
                 mCameraDoubleTapPowerGesture = null;
+            }
             if (!QSUtils.deviceSupportsFlashLight(getActivity())) {
                 powerCategory.removePreference(mTorchLongPressPowerGesture);
             }

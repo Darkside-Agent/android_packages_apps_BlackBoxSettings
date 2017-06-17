@@ -43,7 +43,7 @@ import com.android.internal.logging.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.crdroid.settings.preferences.SeekBarPreference;
+import com.blackbox.settings.preferences.SeekBarPreference;
 
 public class DozeSettingsFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {

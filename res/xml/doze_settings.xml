@@ -32,7 +32,7 @@
             android:summary="@string/tilt_summary"
             android:dependency="doze_enabled" />
 
-        <com.crdroid.settings.preferences.SeekBarPreference
+        <com.blackbox.settings.preferences.SeekBarPreference
             android:key="doze_vibrate_tilt"
             android:title="@string/doze_vibrate"
             android:summary="@string/doze_vibrate_summary"
@@ -54,7 +54,7 @@
             android:summary="@string/pickup_summary"
             android:dependency="doze_enabled" />
 
-        <com.crdroid.settings.preferences.SeekBarPreference
+        <com.blackbox.settings.preferences.SeekBarPreference
             android:key="doze_vibrate_pickup"
             android:title="@string/doze_vibrate"
             android:summary="@string/doze_vibrate_summary"
@@ -83,7 +83,7 @@
             android:summary="@string/pocket_summary"
             android:dependency="doze_enabled" />
 
-        <com.crdroid.settings.preferences.SeekBarPreference
+        <com.blackbox.settings.preferences.SeekBarPreference
             android:key="doze_vibrate_prox"
             android:title="@string/doze_vibrate"
             android:summary="@string/doze_vibrate_summary"
