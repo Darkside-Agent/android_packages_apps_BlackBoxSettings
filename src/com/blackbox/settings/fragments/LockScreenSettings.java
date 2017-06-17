@@ -26,11 +26,9 @@ public class LockScreenSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String LS_GEST_CAT = "lockscreen_gestures_category";
-    private static final String LOCKSCREEN_MAX_NOTIF_CONFIG = "lockscreen_max_notif_cofig";
     private static final String FP_SUCCESS_VIBRATE = "fp_success_vibrate";
     private static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
 
-    private SeekBarPreference mMaxKeyguardNotifConfig;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
     private SwitchPreference mFpKeystore;
@@ -49,12 +47,6 @@ public class LockScreenSettings extends SettingsPreferenceFragment
 
         PreferenceScreen prefSet = getPreferenceScreen();
         PreferenceCategory gestCategory = (PreferenceCategory) findPreference(LS_GEST_CAT);
-
-        mMaxKeyguardNotifConfig = (SeekBarPreference) findPreference(LOCKSCREEN_MAX_NOTIF_CONFIG);
-        int kgconf = Settings.System.getInt(resolver,
-                Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, 5);
-        mMaxKeyguardNotifConfig.setValue(kgconf);
-        mMaxKeyguardNotifConfig.setOnPreferenceChangeListener(this);
 
         mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) findPreference(FP_SUCCESS_VIBRATE);
@@ -76,12 +68,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mMaxKeyguardNotifConfig) {
-            int value = (Integer) newValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, value);
-            return true;
-        } else if (preference == mFingerprintVib) {
+        if (preference == mFingerprintVib) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(resolver,
                     Settings.System.FP_SUCCESS_VIBRATE, value ? 1: 0);
