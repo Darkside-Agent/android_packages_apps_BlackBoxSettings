@@ -963,4 +963,8 @@
     <string name="disable_fc_notifications_title">Disable force close</string>
     <string name="disable_fc_notifications_summary">Hide all force close notification dialogs</string>
 
+    <!-- Dynamic Navbar -->
+    <string name="navbar_dynamic_title">Dynamic navbar color</string>
+    <string name="navbar_dynamic_summary">Adapt navbar color to match foreground running app primary color</string>
+    <string name="restart_app_required">Restart respective app to see effect</string>
 </resources>

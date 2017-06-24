@@ -16,6 +16,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/navbar_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" >
 
     <SwitchPreference
@@ -48,26 +49,31 @@
         android:key="category_navbar_general"
         android:title="@string/navbar_general_title" >
 
-           <com.blackbox.settings.preferences.SeekBarPreference
-                android:key="navbar_height_portrait"
-                android:title="@string/portrait_title"
-                android:max="135"
-                settings:min="65"
-                settings:units="%" />
+        <SwitchPreference
+            android:key="navbar_dynamic"
+            android:title="@string/navbar_dynamic_title"
+            android:summary="@string/navbar_dynamic_summary" />
 
-           <com.blackbox.settings.preferences.SeekBarPreference
-                android:key="navbar_height_landscape"
-                android:title="@string/land_hor_title"
-                android:max="135"
-                settings:min="65"
-                settings:units="%" />
+        <com.blackbox.settings.preferences.SeekBarPreference
+            android:key="navbar_height_portrait"
+            android:title="@string/portrait_title"
+            android:max="135"
+            settings:min="65"
+            settings:units="%" />
 
-           <com.blackbox.settings.preferences.SeekBarPreference
-                android:key="navbar_width"
-                android:title="@string/land_vert_title"
-                android:max="135"
-                settings:min="65"
-                settings:units="%" />
+        <com.blackbox.settings.preferences.SeekBarPreference
+            android:key="navbar_height_landscape"
+            android:title="@string/land_hor_title"
+            android:max="135"
+            settings:min="65"
+            settings:units="%" />
+
+        <com.blackbox.settings.preferences.SeekBarPreference
+            android:key="navbar_width"
+            android:title="@string/land_vert_title"
+            android:max="135"
+            settings:min="65"
+            settings:units="%" />
 
         <PreferenceScreen
             android:key="pulse_settings"
