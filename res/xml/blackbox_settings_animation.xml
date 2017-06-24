@@ -80,11 +80,11 @@
         android:entryValues="@array/qs_tile_animation_interpolator_values"
         android:defaultValue="0" />
 
-    <com.blackbox.settings.preferences.SystemSettingSwitchPreference
+    <!--<com.blackbox.settings.preferences.SystemSettingSwitchPreference
         android:key="qs_fancy_animation"
         android:title="@string/qs_fancy_animation_title"
         android:summary="@string/qs_fancy_animation_summary"
-        android:defaultValue="true" />
+        android:defaultValue="true" />-->
 
     <com.blackbox.settings.preferences.SystemSettingSwitchPreference
         android:key="disable_transition_animations"

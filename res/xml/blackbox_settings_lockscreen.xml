@@ -60,7 +60,6 @@
 
         <SwitchPreference
             android:key="fp_success_vibrate"
-            android:icon="@drawable/ic_fingerprint"
             android:title="@string/fp_success_vibrate_title"
             android:summary="@string/fp_success_vibrate_summary"
             android:defaultValue="true"
@@ -68,7 +67,6 @@
 
         <SwitchPreference
             android:key="fp_unlock_keystore"
-            android:icon="@drawable/ic_fp"
             android:title="@string/fp_unlock_keystore_title"
             android:summary="@string/fp_unlock_keystore_summary"
             android:persistent="false" />
@@ -86,7 +84,6 @@
 
         <com.blackbox.settings.preferences.SecureSettingSwitchPreference
                android:key="lockscreen_hide_status_bar"
-               android:icon="@drawable/shapes_icon"
                android:title="@string/lockscreen_hide_status_bar_title"
                android:summary="@string/lockscreen_hide_status_bar_summary"
                android:defaultValue="true" />
