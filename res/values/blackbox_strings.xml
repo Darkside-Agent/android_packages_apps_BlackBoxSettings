@@ -995,4 +995,8 @@
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
 
+    <!-- Recents dismiss icon -->
+    <string name="recents_dismiss_icon_title">Dismiss Task</string>
+    <string name="recents_dismiss_icon_summary">Show dismiss lock icon in recents view</string>
+
 </resources>

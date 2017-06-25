@@ -42,6 +42,13 @@
             android:fragment="com.blackbox.settings.fragments.SlimRecentPanel"
             android:dependency="use_slim_recents"
             android:persistent="false" />
+
+        <com.blackbox.settings.preferences.SystemSettingSwitchPreference
+            android:key="recents_dismiss_icon"
+            android:icon="@drawable/ic_dismiss"
+            android:title="@string/recents_dismiss_icon_title"
+            android:summary="@string/recents_dismiss_icon_summary"
+            android:defaultValue="true" />
     </PreferenceCategory>
 
 </PreferenceScreen>
