@@ -53,11 +53,11 @@
             android:icon="@drawable/ic_settings_notifications"/>
 
         <!-- Gestures -->
-        <PreferenceScreen
+        <!--<PreferenceScreen
             android:key="gestures_category"
             android:title="@string/gestures_title" 
             android:fragment="com.blackbox.settings.fragments.GestureSettings"
-            android:icon="@drawable/ic_settings_gestures"/>
+            android:icon="@drawable/ic_settings_gestures"/>-->
 
         <!-- Lock Screen -->
         <PreferenceScreen
