@@ -28,4 +28,11 @@
              android:key="screenshot_type"
              android:title="@string/screenshot_type_title" />
 
+        <PreferenceScreen
+            android:key="expanded_desktop"
+            android:title="@string/expanded_desktop_title"
+            android:summary="@string/expanded_desktop_summary"
+            android:fragment="com.blackbox.settings.fragments.ExpandedDesktopPreferenceFragment"
+            android:persistent="false" />
+
 </PreferenceScreen>

@@ -32,11 +32,11 @@
             android:icon="@drawable/ic_settings_navbar"/>
 
         <!-- Display -->
-        <PreferenceScreen
+        <!-- <PreferenceScreen
             android:key="display_category"
             android:title="@string/display_title" 
             android:fragment="com.blackbox.settings.fragments.DisplaySettings"
-            android:icon="@drawable/ic_settings_display" />
+            android:icon="@drawable/ic_settings_display" /> -->
 
         <!-- Animations -->
         <PreferenceScreen
