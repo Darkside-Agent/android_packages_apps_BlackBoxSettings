@@ -100,18 +100,6 @@
                 settings:interval="200"
                 settings:units="ms"
                 android:dependency="pulse_fading_bars_category"/>
-
-            <com.blackbox.settings.preferences.ColorPickerPreference
-                android:key="fling_lavalamp_color_from"
-                android:title="@string/fling_lavalamp_color_from"
-                android:defaultValue="0xffff8080"
-                android:dependency="eos_fling_show_pulse" />
-
-            <com.blackbox.settings.preferences.ColorPickerPreference
-                android:key="fling_lavalamp_color_to"
-                android:title="@string/fling_lavalamp_color_to"
-                android:defaultValue="0xff8080ff"
-                android:dependency="eos_fling_show_pulse" />
         </PreferenceCategory>
 
         <PreferenceCategory
@@ -149,4 +137,5 @@
                 settings:units="ms"
                 android:dependency="pulse_2"/>
         </PreferenceCategory>
+
 </PreferenceScreen>
