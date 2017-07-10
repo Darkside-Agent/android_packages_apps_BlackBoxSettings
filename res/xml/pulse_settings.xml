@@ -113,22 +113,6 @@
                 settings:min="32"
                 settings:interval="16"
                 android:dependency="pulse_2"/>
-
-            <com.blackbox.settings.preferences.SeekBarPreference
-                android:key="pulse_solid_fudge_factor"
-                android:title="@string/pulse_custom_fudge_factor"
-                android:max="7"
-                settings:min="2"
-                android:dependency="pulse_2"/>
-
-            <com.blackbox.settings.preferences.SeekBarPreference
-                android:key="lavamp_solid_speed"
-                android:title="@string/lavamp_solid_speed_title"
-                android:max="30000"
-                settings:min="200"
-                settings:interval="200"
-                settings:units="ms"
-                android:dependency="pulse_2"/>
         </PreferenceCategory>
 
 </PreferenceScreen>
